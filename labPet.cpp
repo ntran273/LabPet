@@ -8,6 +8,7 @@ using namespace std;
 
 int main() {
 	Pet *a = new Snake();
+    static_cast<Snake*>(a)->snek();
 	
     return 0;
 }

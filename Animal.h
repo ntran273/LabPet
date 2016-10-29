@@ -12,20 +12,20 @@ public:
 	~Animal() {};
 
 	string getGender() { return gender; }
-	bool inOrOut() {
-		if (inorOut == 1) {
-			return 1;
-		}
-		return 0;
-	}
 
 };
 
 class Dog : public Animal
 {
 public:
-	Dog() { eat_pop(); }
-	Dog(string _gender, bool inNout) : Animal(_gender, inNout) {};
+    Dog() {};
+    Dog(string _gender, bool inNout) : Animal(_gender, inNout)
+    {
+        if(inNout == 1)
+            cout << "Indoor";
+        else
+            cout << "Outdoor";
+    };
 
 	~Dog() {};
 
@@ -36,8 +36,14 @@ public:
 class Cat : public Animal
 {
 public:
-	Cat() { knock_shit_off_table(); }
-	Cat(string _gender, bool inNout) : Animal(_gender, inNout) {};
+    Cat() {};
+    Cat(string _gender, bool inNout) : Animal(_gender, inNout){
+            if(inNout == 1)
+                cout << "Indoor";
+            else
+                cout << "Outdoor";
+
+    };
 	~Cat() {};
 
 	void knock_shit_off_table() { cout << "Maintain Eye Contact. Assert Dominance" << endl; }
@@ -46,8 +52,14 @@ public:
 class Snake : public Animal
 {
 public:
-	Snake() { snek(); }
-	Snake(string _gender, bool inNout) : Animal(_gender, inNout) {};
+    Snake() {};
+	Snake(string _gender, bool inNout) : Animal(_gender, inNout)
+    {
+        if(inNout == 1)
+            cout << "Indoor";
+        else
+            cout << "Outdoor";
+    };
 
 	~Snake() {};
 	
