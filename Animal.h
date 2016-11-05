@@ -3,15 +3,16 @@
 class Animal : public Pet
 {
 protected:
-	string gender;
-	bool inorOut;
+    string gender;
+    bool inorOut;
 
 public:
-	Animal() {};
-	Animal(string _gender, bool inNout) { gender = _gender; inorOut = inNout; }
-	~Animal() {};
+    Animal() {};
+    Animal(string _gender, bool inNout) { gender = _gender; inorOut = inNout; }
+    ~Animal() {};
 
-	string getGender() { return gender; }
+    
+    string getGender() { return gender; }
 
 };
 
@@ -27,9 +28,10 @@ public:
             cout << "Outdoor";
     };
 
-	~Dog() {};
+    ~Dog() {};
 
-	void eat_pop() { cout << "Yum" << endl; }
+    virtual void action() { cout << "Gru Gru" << endl; }
+    void eat_pop() { cout << "Yum" << endl; }
 };
 
 
@@ -44,16 +46,17 @@ public:
                 cout << "Outdoor";
 
     };
-	~Cat() {};
+    ~Cat() {};
 
-	void knock_shit_off_table() { cout << "Maintain Eye Contact. Assert Dominance" << endl; }
+    virtual void action() { cout << "Meow Meow" << endl; }
+    void knock_shit_off_table() { cout << "Maintain Eye Contact. Assert Dominance" << endl; }
 };
 
 class Snake : public Animal
 {
 public:
     Snake() {};
-	Snake(string _gender, bool inNout) : Animal(_gender, inNout)
+    Snake(string _gender, bool inNout) : Animal(_gender, inNout)
     {
         if(inNout == 1)
             cout << "Indoor";
@@ -61,9 +64,8 @@ public:
             cout << "Outdoor";
     };
 
-	~Snake() {};
-	
-	void snek() { cout << "snek snek snek" << endl; }
+    ~Snake() {};
+    
+    virtual void action() { cout << "Bite Bite" << endl; }
+    void snek() { cout << "snek snek snek" << endl; }
 };
-
-

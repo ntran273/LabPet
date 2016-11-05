@@ -19,6 +19,7 @@ public:
 	Fern(int _greeness) :Plant(_greeness) {};
 	~Fern() {};
 
+	virtual void action() { cout << "Fern Fern" << endl; }
 	void fernicate() { cout << "Fern noises" << endl; }
 
 };
@@ -30,5 +31,6 @@ public:
 
 	~Cactus() {};
 
+	virtual void action() { cout << "Cactus Cactus" << endl; }
 	void poke() { cout << "Poke" << endl; }
 };

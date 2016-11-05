@@ -25,5 +25,7 @@ public:
 
 	string getName() { return name; }
 	int getAge() { return age; }
+	virtual void action() = 0;
+
 
 };

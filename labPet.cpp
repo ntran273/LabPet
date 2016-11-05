@@ -7,8 +7,11 @@
 using namespace std;
 
 int main() {
-	Pet *a = new Snake();
-    static_cast<Snake*>(a)->snek();
+	Pet *a[] = { new Dog, new Cat, new Snake, new Fern, new Cactus, new Fukalite, new Cummingtonite, new Fornacite };
+	for (int i = 0; i < 8; i++) {
+		a[i]->action();
+	}
 	
+	system("pause");
     return 0;
 }

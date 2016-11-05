@@ -28,6 +28,7 @@ public:
 	Fornacite(int _hardness, string _clearage, int _color, string _chemicalComp) : Rock(_hardness, _clearage, _color, _chemicalComp) {};
 	~Fornacite() {};
 
+	virtual void action() { cout << "Forn Fornacite" << endl; }
 };
 
 class Fukalite : public Rock {
@@ -36,6 +37,9 @@ public:
 	Fukalite(int _hardness, string _clearage, int _color, string _chemicalComp) : Rock(_hardness, _clearage, _color, _chemicalComp) {};
 
 	~Fukalite() {};
+
+	virtual void action() { cout << "Fuka Fukalite" << endl; }
+
 };
 
 class Cummingtonite : public Rock {
@@ -43,5 +47,6 @@ public:
 	Cummingtonite() {};
 	Cummingtonite(int _hardness, string _clearage, int _color, string _chemicalComp) : Rock(_hardness, _clearage, _color, _chemicalComp) {};
 	~Cummingtonite() {};
+	virtual void action() { cout << "Cumm Cummingtonite" << endl; }
 
 };
